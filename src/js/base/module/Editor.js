@@ -191,6 +191,7 @@ export default class Editor {
       const linkText = linkInfo.text;
       const isNewWindow = linkInfo.isNewWindow;
       const checkProtocol = linkInfo.checkProtocol;
+      const isNofollow = linkInfo.nofollow;
       let rng = linkInfo.range || this.getLastRange();
       const additionalTextLength = linkText.length - rng.toString().length;
       if (additionalTextLength > 0 && this.isLimited(additionalTextLength)) {
@@ -230,6 +231,11 @@ export default class Editor {
           $(anchor).attr('target', '_blank');
         } else {
           $(anchor).removeAttr('target');
+        }
+        if (isNofollow) {
+          $(anchor).attr('rel', 'nofollow');
+        } else {
+          $(anchor).removeAttr('rel');
         }
       });
 
@@ -805,6 +811,9 @@ export default class Editor {
       // Set isNewWindow by checking its target.
       linkInfo.isNewWindow = $anchor.attr('target') === '_blank';
     }
+
+    if ($anchor.attr('rel') === 'nofollow')
+      linkInfo.nofollow = true;
 
     return linkInfo;
   }

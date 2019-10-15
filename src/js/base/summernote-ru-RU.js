@@ -1,7 +1,14 @@
-(function($) {
-  $.extend($.summernote.lang, {
+
+import $ from 'jquery';
+
+$.summernote = $.summernote || {
+  lang: {},
+};
+
+
+$.extend($.summernote.lang, {
     'ru-RU': {
-      font: {
+    font: {
         bold: 'Полужирный',
         italic: 'Курсив',
         underline: 'Подчёркнутый',
@@ -12,8 +19,8 @@
         subscript: 'Нижний индекс',
         superscript: 'Верхний индекс',
         size: 'Размер шрифта',
-      },
-      image: {
+    },
+    image: {
         image: 'Картинка',
         insert: 'Вставить картинку',
         resizeFull: 'Восстановить размер',
@@ -34,15 +41,15 @@
         url: 'URL картинки',
         remove: 'Удалить картинку',
         original: 'Оригинал',
-      },
-      video: {
+    },
+    video: {
         video: 'Видео',
         videoLink: 'Ссылка на видео',
         insert: 'Вставить видео',
         url: 'URL видео',
         providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion или Youku)',
-      },
-      link: {
+    },
+    link: {
         link: 'Ссылка',
         insert: 'Вставить ссылку',
         unlink: 'Удалить ссылку',
@@ -52,8 +59,8 @@
         openInNewWindow: 'Открывать в новом окне',
         nofollow: 'Добавить аттрибут nofollow',
         useProtocol: 'Использовать протокол по умолчанию',
-      },
-      table: {
+    },
+    table: {
         table: 'Таблица',
         addRowAbove: 'Добавить строку выше',
         addRowBelow: 'Добавить строку ниже',
@@ -62,11 +69,11 @@
         delRow: 'Удалить строку',
         delCol: 'Удалить столбец',
         delTable: 'Удалить таблицу',
-      },
-      hr: {
+    },
+    hr: {
         insert: 'Вставить горизонтальную линию',
-      },
-      style: {
+    },
+    style: {
         style: 'Стиль',
         p: 'Нормальный',
         blockquote: 'Цитата',
@@ -77,17 +84,17 @@
         h4: 'Заголовок 4',
         h5: 'Заголовок 5',
         h6: 'Заголовок 6',
-      },
-      lists: {
+    },
+    lists: {
         unordered: 'Маркированный список',
         ordered: 'Нумерованный список',
-      },
-      options: {
+    },
+    options: {
         help: 'Помощь',
         fullscreen: 'На весь экран',
         codeview: 'Исходный код',
-      },
-      paragraph: {
+    },
+    paragraph: {
         paragraph: 'Параграф',
         outdent: 'Уменьшить отступ',
         indent: 'Увеличить отступ',
@@ -95,8 +102,8 @@
         center: 'Выровнять по центру',
         right: 'Выровнять по правому краю',
         justify: 'Растянуть по ширине',
-      },
-      color: {
+    },
+    color: {
         recent: 'Последний цвет',
         more: 'Еще цвета',
         background: 'Цвет фона',
@@ -105,8 +112,8 @@
         setTransparent: 'Сделать прозрачным',
         reset: 'Сброс',
         resetToDefault: 'Восстановить умолчания',
-      },
-      shortcut: {
+    },
+    shortcut: {
         shortcuts: 'Сочетания клавиш',
         close: 'Закрыть',
         textFormatting: 'Форматирование текста',
@@ -115,8 +122,8 @@
         documentStyle: 'Стиль документа',
         extraKeys: 'Дополнительные комбинации',
         cpSelect: 'Выбрать',
-      },
-      help: {
+    },
+    help: {
         'insertParagraph': 'Новый параграф',
         'undo': 'Отменить последнюю команду',
         'redo': 'Повторить последнюю команду',
@@ -144,15 +151,15 @@
         'formatH6': 'Форматировать текущий блок как H6',
         'insertHorizontalRule': 'Вставить горизонтальную черту',
         'linkDialog.show': 'Показать диалог "Ссылка"',
-      },
-      history: {
+    },
+    history: {
         undo: 'Отменить',
         redo: 'Повтор',
-      },
-      specialChar: {
+    },
+    specialChar: {
         specialChar: 'СПЕЦИАЛЬНЫЕ СИМВОЛЫ',
         select: 'Выберите специальные символы',
-      },
     },
-  });
-})(jQuery);
+    },
+});
+  

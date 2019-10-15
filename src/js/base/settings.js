@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import './summernote-en-US';
+import './summernote-ru-RU';
 import '../summernote';
 import dom from './core/dom';
 import range from './core/range';
@@ -36,7 +36,7 @@ $.summernote = $.extend($.summernote, {
   lists: lists,
 
   options: {
-    langInfo: $.summernote.lang['en-US'],
+    langInfo: $.summernote.lang['ru-RU'],
     id: $.now(),
     editing: true,
     modules: {
@@ -68,7 +68,7 @@ $.summernote = $.extend($.summernote, {
 
     buttons: {},
 
-    lang: 'en-US',
+    lang: 'ru-RU',
 
     followingToolbar: false,
     otherStaticBar: '',
@@ -116,6 +116,7 @@ $.summernote = $.extend($.summernote, {
     height: null,
     linkTargetBlank: true,
     useProtocol: true,
+    nofollow: true,
     defaultProtocol: 'http://',
 
     focus: false,
